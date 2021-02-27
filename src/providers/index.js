@@ -10,6 +10,7 @@ import Cognito from './cognito'
 import Credentials from './credentials'
 import Discord from './discord'
 import Email from './email'
+import EVEOnline from './eveonline'
 import Facebook from './facebook'
 import Foursquare from './foursquare'
 import FusionAuth from './fusionauth'
@@ -20,6 +21,7 @@ import IdentityServer4 from './identity-server4'
 import LINE from './line'
 import LinkedIn from './linkedin'
 import MailRu from './mailru'
+import Medium from './medium'
 import Netlify from './netlify'
 import Okta from './okta'
 import Reddit from './reddit'
@@ -45,6 +47,7 @@ export default {
   Credentials,
   Discord,
   Email,
+  EVEOnline,
   Facebook,
   Foursquare,
   FusionAuth,
@@ -55,6 +58,7 @@ export default {
   LINE,
   LinkedIn,
   MailRu,
+  Medium,
   Netlify,
   Okta,
   Reddit,

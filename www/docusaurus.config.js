@@ -48,12 +48,12 @@ module.exports = {
         }
       ]
     },
-    announcementBar: {
-      id: 'release-candiate-announcement',
-      content: 'NextAuth.js now has automatic 🤖 releases 🎉! Check out the <a href="https://next-auth-git-canary.nextauthjs.vercel.app">Canary documentation 📚</a>',
-      backgroundColor: '#2DB2F9',
-      textColor: '#fff'
-    },
+    // announcementBar: {
+    //   id: 'release-candiate-announcement',
+    //   content: 'NextAuth.js now has automatic 🤖 releases 🎉! Check out the <a href="https://next-auth-git-canary.nextauthjs.vercel.app">Canary documentation 📚</a>',
+    //   backgroundColor: '#2DB2F9',
+    //   textColor: '#fff'
+    // },
     footer: {
       links: [
         {
@@ -68,7 +68,7 @@ module.exports = {
               to: '/contributors'
             },
             {
-              label: 'Canary docs',
+              label: 'Canary documentation',
               to: 'https://next-auth-git-canary.nextauthjs.vercel.app/'
             }
           ]
