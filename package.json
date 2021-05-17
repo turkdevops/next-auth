@@ -93,7 +93,7 @@
     "prisma": "^2.16.1",
     "puppeteer": "^5.2.1",
     "puppeteer-extra": "^3.1.15",
-    "puppeteer-extra-plugin-stealth": "^2.6.1",
+    "puppeteer-extra-plugin-stealth": "^2.7.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "ts-standard": "^10.0.0",
