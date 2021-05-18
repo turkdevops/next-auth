@@ -15,6 +15,14 @@ It comes with the constraint that users authenticated in this manner are not per
 The functionality provided for credentials based authentication is intentionally limited to discourage use of passwords due to the inherent security risks associated with them and the additional complexity associated with supporting usernames and passwords.
 :::
 
+## Options
+
+The **Credentials Provider** comes with a set of default options:
+
+- [Credentials Provider options](https://github.com/nextauthjs/next-auth/blob/main/src/providers/credentials.js)
+
+You can override any of the options to suit your own use case.
+
 ## Example
 
 The Credentials provider is specified like other providers, except that you need to define a handler for `authorize()` that accepts credentials submitted via HTTP POST as input and returns either:
@@ -31,6 +39,8 @@ The Credentials provider is specified like other providers, except that you need
 
   If you throw an Error, the user will be sent to the error page with the error message as a query parameter. If throw a URL (a string), the user will be redirected to the URL.
 
+The Credentials provider's `authorize()` method also provides the request object as the second parameter (see example below).
+
 ```js title="pages/api/auth/[...nextauth].js"
 import Providers from `next-auth/providers`
 ...
@@ -45,7 +55,7 @@ providers: [
       username: { label: "Username", type: "text", placeholder: "jsmith" },
       password: {  label: "Password", type: "password" }
     },
-    async authorize(credentials) {
+    async authorize(credentials, req) {
       // Add logic here to look up the user from the credentials supplied
       const user = { id: 1, name: 'J Smith', email: 'jsmith@example.com' }
 
@@ -82,7 +92,7 @@ As with all providers, the order you specify them is the order they are displaye
     Providers.Credentials({
       id: 'domain-login',
       name: "Domain Account",
-      async authorize(credentials) {
+      async authorize(credentials, req) {
         const user = { /* add function to get user */ }
         return user
       },
@@ -95,7 +105,7 @@ As with all providers, the order you specify them is the order they are displaye
     Providers.Credentials({
       id: 'intranet-credentials',
       name: "Two Factor Auth",
-      async authorize(credentials) {
+      async authorize(credentials, req) {
         const user = { /* add function to get user */ } 
         return user
       },

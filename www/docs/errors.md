@@ -83,6 +83,25 @@ Check if `cookies.pkceCodeVerifier` is configured correctly. The default `code_c
 
 #### JWT_SESSION_ERROR
 
+https://next-auth.js.org/errors#jwt_session_error JWKKeySupport: the key does not support HS512 verify algorithm
+
+The algorithm used for generating your key isn't listed as supported. You can generate a HS512 key using
+
+````
+  jose newkey -s 512 -t oct -a HS512
+````
+
+If you are unable to use an HS512 key (for example to interoperate with other services) you can define what is supported using
+
+````
+  jwt: {
+    signingKey: {"kty":"oct","kid":"--","alg":"HS256","k":"--"},
+    verificationOptions: {
+      algorithms: ["HS256"]
+    }
+  }
+````
+
 #### SESSION_ERROR
 
 ---
