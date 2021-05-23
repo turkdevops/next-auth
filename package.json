@@ -89,7 +89,7 @@
     "next": "^10.0.5",
     "pg": "^8.2.1",
     "postcss-cli": "^7.1.1",
-    "postcss-nested": "^4.2.1",
+    "postcss-nested": "^4.2.3",
     "prisma": "^2.16.1",
     "puppeteer": "^5.2.1",
     "puppeteer-extra": "^3.1.15",
