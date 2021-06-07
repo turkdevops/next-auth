@@ -88,7 +88,7 @@
     "mysql": "^2.18.1",
     "next": "^10.0.5",
     "pg": "^8.2.1",
-    "postcss-cli": "^7.1.1",
+    "postcss-cli": "^7.1.2",
     "postcss-nested": "^4.2.1",
     "prisma": "^2.16.1",
     "puppeteer": "^5.2.1",
