@@ -11,6 +11,11 @@ module.exports = {
     prism: {
       theme: require("prism-react-renderer/themes/vsDark"),
     },
+    algolia: {
+      apiKey: "b81e3ca39a920b7815e880aea49c00ec",
+      indexName: "next-auth",
+      searchParameters: {},
+    },
     navbar: {
       title: "NextAuth.js",
       logo: {
@@ -37,12 +42,12 @@ module.exports = {
           position: "left",
         },
         {
-          href: "https://www.npmjs.com/package/next-auth",
+          to: "https://www.npmjs.com/package/next-auth",
           label: "npm",
           position: "right",
         },
         {
-          href: "https://github.com/nextauthjs/next-auth",
+          to: "https://github.com/nextauthjs/next-auth",
           label: "GitHub",
           position: "right",
         },
@@ -68,8 +73,8 @@ module.exports = {
               to: "/contributors",
             },
             {
-              label: "Canary documentation",
-              to: "https://next-auth-git-canary.nextauthjs.vercel.app/",
+              label: "Next documentation",
+              to: "https://next-auth-git-next.nextauthjs.vercel.app",
             },
           ],
         },
@@ -113,6 +118,13 @@ module.exports = {
       ],
       copyright: "NextAuth.js &copy; Iain Collins 2021",
     },
+    colorMode: {
+      respectPrefersColorScheme: true,
+      switchConfig: {
+        darkIcon: "🌑",
+        lightIcon: "💡",
+      },
+    },
   },
   presets: [
     [
@@ -129,5 +141,4 @@ module.exports = {
       },
     ],
   ],
-  plugins: ["docusaurus-lunr-search"],
 }

@@ -66,7 +66,7 @@ See the [providers documentation](/configuration/providers) for a list of suppor
 
 #### Description
 
-A random string used to hash tokens, sign cookies and generate crytographic keys.
+A random string used to hash tokens, sign cookies and generate cryptographic keys.
 
 If not specified, it uses a hash for all configuration options, including Client ID / Secrets for entropy.
 
@@ -229,7 +229,7 @@ pages: {
   signOut: '/auth/signout',
   error: '/auth/error', // Error code passed in query string as ?error=
   verifyRequest: '/auth/verify-request', // (used for check email message)
-  newUser: null // If set, new users will be directed here on first sign in
+  newUser: '/auth/new-user' // New users will be directed here on first sign in (leave the property out if not of interest)
 }
 ```
 
@@ -309,7 +309,7 @@ By default NextAuth.js uses a database adapter that uses TypeORM and supports My
 
 You can use the `adapter` option to use the Prisma adapter - or pass in your own adapter if you want to use a database that is not supported by one of the built-in adapters.
 
-See the [adapter documentation](/schemas/adapters) for more information.
+See the [adapter documentation](/adapters/overview) for more information.
 
 :::note
 If the `adapter` option is specified it overrides the `database` option, only specify one or the other.
