@@ -49,7 +49,7 @@
     "nodemailer": "^6.4.16",
     "oauth": "^0.9.15",
     "pkce-challenge": "^2.1.0",
-    "preact": "^10.4.1",
+    "preact": "^10.5.13",
     "preact-render-to-string": "^5.1.7",
     "querystring": "^0.2.0",
     "require_optional": "^1.0.1",
