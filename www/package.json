@@ -13,7 +13,7 @@
     "@docusaurus/core": "^2.0.0-alpha.66",
     "@docusaurus/preset-classic": "^2.0.0-alpha.66",
     "classnames": "^2.2.6",
-    "docusaurus-lunr-search": "^2.1.7",
+    "docusaurus-lunr-search": "^2.1.14",
     "jose": "^2.0.2",
     "lodash.times": "^4.3.2",
     "react": "^17.0.1",
