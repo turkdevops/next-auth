@@ -139,9 +139,12 @@
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-      "project": "./tsconfig.json"
+      "project": "./tsconfig.eslint.json"
     },
-    "extends": ["standard-with-typescript", "prettier"],
+    "extends": [
+      "standard-with-typescript",
+      "prettier"
+    ],
     "ignorePatterns": [
       "node_modules",
       "next-env.d.ts",
@@ -165,15 +168,26 @@
     },
     "overrides": [
       {
-        "files": ["./**/*test.js"],
+        "files": [
+          "./**/*test.js"
+        ],
         "env": {
           "jest/globals": true
         },
-        "extends": ["plugin:jest/recommended"],
-        "plugins": ["jest"]
+        "extends": [
+          "plugin:jest/recommended"
+        ],
+        "plugins": [
+          "jest"
+        ]
       }
     ]
   },
+  "eslintIgnore": [
+    "./*.d.ts",
+    "**/tests",
+    "**/__tests__"
+  ],
   "release": {
     "branches": [
       "+([0-9])?(.{+([0-9]),x}).x",
