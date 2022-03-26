@@ -30,7 +30,9 @@
     "publish:beta": "npm publish --tag beta",
     "publish:canary": "npm publish --tag canary",
     "lint": "ts-standard",
-    "lint:fix": "ts-standard --fix"
+    "lint:fix": "ts-standard --fix",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "files": [
     "dist",
@@ -53,7 +55,8 @@
     "preact-render-to-string": "^5.1.7",
     "querystring": "^0.2.0",
     "require_optional": "^1.0.1",
-    "typeorm": "^0.2.30"
+    "typeorm": "^0.2.30",
+    "@snyk/protect": "latest"
   },
   "peerDependencies": {
     "react": "^16.13.1 || ^17",
@@ -108,5 +111,6 @@
     "globals": [
       "fetch"
     ]
-  }
+  },
+  "snyk": true
 }
