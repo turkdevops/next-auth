@@ -25,7 +25,7 @@ export default function AzureAD<P extends AzureADProfile>(
     id: "azure-ad",
     name: "Azure Active Directory",
     type: "oauth",
-    wellKnown: `https://login.microsoftonline.com/${tenant}/v2.0/.well-known/openid-configuration`,
+    wellKnown: `https://login.microsoftonline.com/${tenant}/v2.0/.well-known/openid-configuration?appid=${options.clientId}`,
     authorization: {
       params: {
         scope: "openid profile email",
@@ -59,6 +59,15 @@ export default function AzureAD<P extends AzureADProfile>(
           email: profile.email,
         }
       }
+    },
+    style: {
+      logo: "https://raw.githubusercontent.com/nextauthjs/next-auth/main/packages/next-auth/provider-logos/azure.svg",
+      logoDark:
+        "https://raw.githubusercontent.com/nextauthjs/next-auth/main/packages/next-auth/provider-logos/azure-dark.svg",
+      bg: "#fff",
+      text: "#0072c6",
+      bgDark: "#0072c6",
+      textDark: "#fff",
     },
     options,
   }
